@@ -2,6 +2,7 @@
 :root{
     /* Переменные светлой темы */
     --main-color: #000;
+    --text-color: #FFFFFF;
     --background-color:#FFFFFF;
     --back-gradient: 
         repeating-linear-gradient(
@@ -22,6 +23,6 @@
             #1a1a1a 100%);
 
     /* шрифты */
-    --Inter: "Inter Variable";
+    --Inter: "Inter-Variable";
     --PressStart2P: "PressStart2P"
 }

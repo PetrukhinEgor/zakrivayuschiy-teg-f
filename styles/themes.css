@@ -8,6 +8,8 @@
 :root.theme-dark{
     /* Переменные темной темы */
     --main-color:#00CC14;
+    --text-color: #00CC14;
+    --floppy-color:#00CC14;;
     --background-color:#000000;
     --back-gradient: 
         repeating-linear-gradient(
@@ -36,6 +38,8 @@
 :root.theme-light{
     /* Переменные светлой темы */
     --main-color: #000;
+    --text-color: #FFFFFF;
+    --floppy-color:#000;
     --background-color:#FFFFFF;
     --back-gradient: 
         repeating-linear-gradient(
