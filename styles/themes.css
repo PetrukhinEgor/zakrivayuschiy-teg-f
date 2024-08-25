@@ -95,7 +95,7 @@
   /* шрифты */
   --font-wght-card-title: 700;
   --font-wght-card-description: 400;
-  --Inter: "Inter Variable";
+  --Inter: "Inter-Variable";
   --PressStart2P: "PressStart2P";
 }
 
@@ -127,7 +127,7 @@
     /* шрифты */
     --font-wght-card-title: 700;
     --font-wght-card-description: 400;
-    --Inter: "Inter Variable";
+    --Inter: "Inter-Variable";
     --PressStart2P: "PressStart2P";
   }
 }
