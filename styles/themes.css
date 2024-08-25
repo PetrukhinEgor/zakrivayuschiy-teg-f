@@ -5,61 +5,129 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-:root.theme-dark{
-    /* Переменные темной темы */
-    --main-color:#00CC14;
-    --text-color: #00CC14;
-    --floppy-color:#00CC14;;
-    --background-color:#000000;
-    --back-gradient: 
-        repeating-linear-gradient(
-            to right, 
-            #000 0, 
-            #000 2px, 
-            transparent 2px, 
-            transparent 4px),
-        repeating-linear-gradient(
-            to bottom, 
-            #000 0, 
-            #000 2px, 
-            transparent 2px, 
-            transparent 4px),
-        linear-gradient(
-            to bottom, 
-            #007f0c 0.01%, 
-            #004306 100%);
+:root.theme-dark {
+  /* Переменные темной темы */
+  --contour-color: #00cc14;
+  --main-body: #ff0000;
+  --main-color: #00cc14;
+  --text-color: #00cc14;
+  --floppy-color: #00cc14;
+  --background-color: #000000;
+  --back-gradient: repeating-linear-gradient(
+      to right,
+      #000 0,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #000 0,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
 
-    /* шрифты */
-    --Inter: "Inter Variable";
-    --PressStart2P: "PressStart2P"
-
+  /* шрифты */
+  --font-wght-card-title: 785;
+  --font-wght-card-description: 465;
+  --Inter: "Inter-Variable";
+  --PressStart2P: "PressStart2P";
 }
 
-:root.theme-light{
-    /* Переменные светлой темы */
-    --main-color: #000;
-    --text-color: #FFFFFF;
-    --floppy-color:#000;
-    --background-color:#FFFFFF;
-    --back-gradient: 
-        repeating-linear-gradient(
-            to right, 
-            #d3d3d3 0, 
-            #d3d3d3 2px, 
-            transparent 2px, 
-            transparent 4px),
-        repeating-linear-gradient(
-            to bottom, 
-            #d3d3d3 0, 
-            #d3d3d3 2px, 
-            transparent 2px, 
-            transparent 4px),
-        linear-gradient(
-            to bottom, 
-            #e7e7e7 0.01%, 
-            #1a1a1a 100%);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --contour-color: #00cc14;
+    --main-body: #ff0000;
+    --main-color: #00cc14;
+    --text-color: #00cc14;
+    --floppy-color: #00cc14;
+    --background-color: #000000;
+    --back-gradient: repeating-linear-gradient(
+        to right,
+        #000 0,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        #000 0,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
 
     /* шрифты */
+    --font-wght-card-title: 785;
+    --font-wght-card-description: 465;
+    --Inter: "Inter-Variable";
+    --PressStart2P: "PressStart2P";
+  }
+}
+
+:root.theme-light {
+  /* Переменные светлой темы */
+  --contour-color: #000;
+  --main-body: #ff0000;
+  --main-color: #000;
+  --text-color: #ffffff;
+  --floppy-color: #000;
+  --background-color: #ffffff;
+  --back-gradient: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+
+  /* шрифты */
+  --font-wght-card-title: 700;
+  --font-wght-card-description: 400;
+  --Inter: "Inter Variable";
+  --PressStart2P: "PressStart2P";
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Переменные светлой темы */
+    --contour-color: #000;
+    --main-body: #ff0000;
+    --main-color: #000;
+    --text-color: #ffffff;
+    --floppy-color: #000;
+    --background-color: #ffffff;
+    --back-gradient: repeating-linear-gradient(
+        to right,
+        #d3d3d3 0,
+        #d3d3d3 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        #d3d3d3 0,
+        #d3d3d3 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+
+    /* шрифты */
+    --font-wght-card-title: 700;
+    --font-wght-card-description: 400;
     --Inter: "Inter Variable";
-    --PressStart2P: "PressStart2P"
+    --PressStart2P: "PressStart2P";
+  }
 }
