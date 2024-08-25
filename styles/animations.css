@@ -84,11 +84,6 @@
   transition: fill 0.3s ease;
 }
 
-.card__icon-button .main-body {
-  fill: transparent;
-  transition: fill 0.3s ease;
-}
-
 .card__icon-button:active .core {
   fill: var(--main-body);
   transition: fill 0.3s ease;
