@@ -17,8 +17,8 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--Inter, "Inter-Variable"), sans-serif;
-  font-variation-settings: "wght" 400;
+  font-family: "Inter-Variable", sans-serif;
+  font-variation-settings: "wght" var(--main-font-weight, 400);
   display: grid;
   background-image: var(--back-gradient);
   background-size: cover;
@@ -26,7 +26,7 @@
 }
 
 .header {
-  font-family: var(--PressStart2P, "PressStart2P"), serif;
+  font-family: "PressStart2P", fantasy;
   text-transform: uppercase;
   color: var(--main-color);
   background-color: var(--background-color);
@@ -47,6 +47,7 @@
 .header__title {
   margin-block-start: clamp(7.5rem, 1.502vw + 7.148rem, 8.5rem);
   font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  cursor: pointer;
 }
 
 .header__description {
@@ -79,6 +80,8 @@
   text-align: left;
   cursor: pointer;
   transition: opacity 0.3s ease;
+  padding: 0;
+  padding-bottom: 3px;
 }
 
 .theme-menu__button:focus {
@@ -132,6 +135,7 @@
   display: grid;
   background-color: var(--background-color);
   border: 2px solid var(--main-color, #000000);
+  width: clamp(23.438rem, 30.141vw + 16.373rem, 43.5rem);
 }
 
 .card__title {
@@ -154,7 +158,7 @@
   z-index: 1;
   top: 25px;
   right: 25px;
-  font-family: var(--PressStart2P, "PressStart2P"), serif;
+  font-family: "PressStart2P", fantasy;
   color: var(--main-color);
   mix-blend-mode: hard-light;
   font-size: 14px;
@@ -200,9 +204,10 @@
 }
 
 .card__text {
-  width: clamp(20.063rem, 30.516vw + 12.91rem, 40.375rem);
+  /* width: clamp(20.063rem, 30.516vw + 12.91rem, 40.375rem); */
   padding-top: 25px;
   padding-left: 25px;
+  padding-right: 25px;
   display: grid;
   row-gap: 27px;
   border-top: 2px solid var(--main-color);
@@ -220,33 +225,44 @@
   z-index: 1;
   mix-blend-mode: difference;
   color: var(--text-color);
-  transition: color 0.5s ease-in-out;
+}
+
+.button {
+  font-family: "PressStart2P", fantasy;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 12.6px;
+  color: var(--main-color);
+  background-color: var(--background-color);
+  border: 2px solid var(--main-color);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
 }
 
 /* Кнопка "LIKE" */
 .card__like-button {
-  background-color: transparent;
-  color: var(--main-color);
-  border: 2px solid var(--main-color);
-  padding: 12.5px 37px;
-  font-family: var(--PressStart2P, "PressStart2P"), serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 12.6px;
-  text-align: left;
-  justify-self: right;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
+  width: 130px;
+  height: 38px;
 }
 
 /* Кнопка SVG */
 .card__icon-button {
+  transition: border 0.3s ease;
+  display: grid;
   background-color: transparent;
   border: none;
   cursor: pointer;
-  align-items: center;
   padding: 0;
+  height: 38px;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--main-color);
 }
 
 .card__bottom {
@@ -258,6 +274,11 @@
   justify-content: flex-end;
 }
 
+.like-icon {
+  align-self: center;
+  justify-self: center;
+}
+
 .footer {
   margin-top: 50px;
   margin-bottom: 100px;
@@ -267,52 +288,13 @@
 
 .footer__button {
   padding: 15px 20px;
+  gap: 8px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  background-color: var(--background-color);
-  border: 2px solid var(--main-color);
-  font-family: var(--PressStart2P, "PressStart2P"), serif;
-  align-items: center;
-  color: var(--main-color);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 12.6px;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.footer__button::after {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--main-color);
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
-}
-
-.footer__button:hover::after {
-  transform: translateX(0);
-}
-
-.floppy {
-  color: var(--floppy-color);
-  transition: color 0.5s ease-in-out;
-}
-
-.footer__button:hover .floppy {
-  mix-blend-mode: difference;
-  color: var(--floppy-color);
 }
 
 .modal {
-  padding: 30px;
-  font-family: var(--PressStart2P, "PressStart2P"), serif;
+  font-family: "PressStart2P", fantasy;
   background-color: var(--background-color);
   color: var(--main-color);
   text-transform: uppercase;
@@ -324,6 +306,8 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding: 30px;
+  align-items: center;
 }
 
 .modal[open]::backdrop {
@@ -343,19 +327,21 @@
   font-weight: 400;
   line-height: 21px;
   text-align: left;
+  width: clamp(12.375rem, 3.38vw + 11.583rem, 14.625rem);
 }
 
 .modal__button {
-  position: relative;
-  overflow: hidden;
   text-transform: uppercase;
-  background-color: transparent;
-  border: 2px solid var(--main-color);
   width: clamp(16.063rem, 3.38vw + 15.27rem, 18.313rem);
   height: 38px;
 }
 
-@media (width>=375px) {
+.floppy {
+  width: 39px;
+  height: 39px;
+}
+
+@media (width>375px) {
   .footer__button {
     flex-direction: row;
   }
