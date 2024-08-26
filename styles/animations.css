@@ -20,7 +20,6 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--main-color);
-  transition: box-shadow 0.3s ease;
 }
 
 .button::after {
@@ -114,10 +113,10 @@
 /* Кифремы */
 @keyframes arrow {
   0% {
-    left: -13px;
+    transform: translateX(0);
   }
   100% {
-    left: -9px;
+    transform: translateX(4px);
   }
 }
 
